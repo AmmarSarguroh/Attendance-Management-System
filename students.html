@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System - Students</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html" class="logo">AMS 📋</a>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="students.html" class="active">Students</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="student_report.html">Student Report</a>
+            <a href="class_report.html">Class Report</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Students Management</h1>
+
+        <!-- Add Student Section -->
+        <div class="section">
+            <h2>Add New Student</h2>
+            <div id="studentMessage" class="message"></div>
+            <div class="form-group">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" placeholder="Enter student name">
+            </div>
+            <div class="form-group">
+                <label for="rollNumber">Roll Number:</label>
+                <input type="text" id="rollNumber" placeholder="Enter roll number">
+            </div>
+            <div class="form-group">
+                <label for="studentClass">Class:</label>
+                <select id="studentClass">
+                    <!-- Options for classes 1-10 will be dynamically generated or hardcoded -->
+                    <option value="">-- Select Class --</option>
+                    <option value="1">Class 1</option>
+                    <option value="2">Class 2</option>
+                    <option value="3">Class 3</option>
+                    <option value="4">Class 4</option>
+                    <option value="5">Class 5</option>
+                    <option value="6">Class 6</option>
+                    <option value="7">Class 7</option>
+                    <option value="8">Class 8</option>
+                    <option value="9">Class 9</option>
+                    <option value="10">Class 10</option>
+                </select>
+            </div>
+            <button onclick="addStudent()">Add Student</button>
+        </div>
+
+        <!-- View Students Section -->
+        <div class="section">
+            <h2>All Students</h2>
+            <div class="form-group">
+                <label for="filterClass">Filter by Class:</label>
+                <select id="filterClass" onchange="loadStudents()">
+                    <option value="">All Classes</option>
+                    <option value="1">Class 1</option>
+                    <option value="2">Class 2</option>
+                    <option value="3">Class 3</option>
+                    <option value="4">Class 4</option>
+                    <option value="5">Class 5</option>
+                    <option value="6">Class 6</option>
+                    <option value="7">Class 7</option>
+                    <option value="8">Class 8</option>
+                    <option value="9">Class 9</option>
+                    <option value="10">Class 10</option>
+                </select>
+            </div>
+            <button onclick="loadStudents()">Refresh List</button>
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Roll Number</th>
+                        <th>Class</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadStudents();
+        });
+    </script>
+</body>
+</html>

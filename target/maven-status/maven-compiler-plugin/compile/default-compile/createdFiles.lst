@@ -1,0 +1,11 @@
+AttendanceServer$GetAttendanceHandler.class
+AttendanceServer$GetStudentAttendanceByIdHandler.class
+AttendanceServer$MarkAttendanceHandler.class
+AttendanceServer$MarkClassAttendanceHandler.class
+AttendanceServer$DeleteStudentHandler.class
+AttendanceServer.class
+AttendanceServer$AddStudentHandler.class
+AttendanceServer$DeleteAttendanceHandler.class
+AttendanceServer$GetAttendanceByClassAndDateHandler.class
+AttendanceServer$GetMonthlyClassAttendanceHandler.class
+AttendanceServer$GetStudentsHandler.class

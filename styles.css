@@ -1,0 +1,276 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.navbar .logo {
+    color: #667eea;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navbar .nav-links a {
+    color: #555;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 3px;
+}
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+    color: #764ba2;
+    border-bottom: 2px solid #764ba2;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.home-container {
+    text-align: center;
+}
+
+h1 {
+    color: #667eea;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+h3 {
+    color: #667eea;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 40px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fcfcfc;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+    font-size: 15px;
+}
+input[type="text"],
+input[type="date"],
+input[type="month"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.2);
+    outline: none;
+}
+
+/* Buttons */
+.button, button {
+    background: #667eea;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* For .button anchor tags */
+    display: inline-block;
+}
+.button:hover, button:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+}
+.delete-btn {
+    background: #dc3545;
+    padding: 8px 15px;
+    font-size: 13px;
+    margin: 0;
+}
+.delete-btn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures rounded corners apply to content */
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+th {
+    background: #667eea;
+    color: white;
+    font-weight: 600;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background: #f0f4fa;
+}
+
+/* Status Badges */
+.status-present {
+    color: #28a745;
+    font-weight: bold;
+}
+.status-absent {
+    color: #dc3545;
+    font-weight: bold;
+}
+.status-unknown { /* For dates not yet marked */
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/* Messages (Success/Error) */
+.message {
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 5px;
+    display: none;
+    font-weight: 500;
+}
+.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Home Page Specifics */
+.home-container p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+}
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.home-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+.home-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+.home-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+.home-card h2 {
+    color: #667eea;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.home-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Attendance Marking Checkboxes */
+.student-attendance-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+.student-attendance-item:last-child {
+    border-bottom: none;
+}
+.student-attendance-item label {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+.student-attendance-item input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+.attendance-status-group {
+    display: flex;
+    gap: 15px;
+}
